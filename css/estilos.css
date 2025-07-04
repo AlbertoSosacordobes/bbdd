@@ -13,9 +13,9 @@ th{
     color: white;
 }
 
-tr:nth-child(even) { 
+td :nth-child(even) { 
 
-    background-color: aquamarine; /* cambia el color de la fila iares*/
+    background-color: aquamarine; /* cambia el color de la fila ares*/
 }
 
 nav > ul{
