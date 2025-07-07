@@ -10,10 +10,13 @@
             <th>apellido2: </th>
             <th>Fecha de Nacimiento: </th>
             <th>Correo Electronico: </th>
+            <th>Modificar</th>
+            <th>Borrar</th>
             </tr>
         </thead>
-    </table>
+
     <tbody>
+
   <?php
         $consulta = "SELECT * FROM alumnos";
         //ejecuta la consulta y devuelve un array con todas las
@@ -30,6 +33,21 @@
                 echo "<td> ".$fila['apellido2']." </td>\n";
                 echo "<td> ".$fila['fecha_nac']." </td>\n";
                 echo "<td> ".$fila['email']." </td>\n";
+                echo "<td><a href='editar.php?id=".$fila['id']."'> Editar </a></td>\n"; // hacer boton de editar
+                echo "<td><a href='borrado.php?id=".$fila['id']."'> Eliminar </a></td>\n"; //hacer borrado de unidad.
                 echo "</tr>\n";
         }
     ?>
+    </tbody>
+    </table>
+    <div class="mensaje">
+        <?php
+            if(isset($_SESSION['mensaje'])){
+                echo $_SESSION['mensaje'];
+                unset($_SESSION['mensaje']);
+
+            }  
+    
+
+
+ require_once('plantillas/pie.php'); ?>

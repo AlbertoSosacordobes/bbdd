@@ -1,14 +1,11 @@
+?>
 
-</main>
-<footer>
-    <h6>Alberto sosa. todos los derechos adquiridos</h6>
-</footer>    
-    
+    </main>
+    <footer>
+        <h6>Alberto Sosa - Todos los derechos reservados.</h6>
+    </footer>
 </body>
-
 </html>
-
-<?php   
+<?php 
 mysqli_close($conexion);
-
-?>'
+?>

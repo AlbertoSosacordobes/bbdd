@@ -27,7 +27,7 @@ if (!isset($_POST['nombre'])) {
     <?php 
         $consulta = 
             "insert into alumnos (nombre,apellido1,apellido2,fecha_nac, email) 
-            values('$nombre','$apellido1', '$apellido2', '$fechaNac', '$email') ";
+            values('$nombre','$apellido1', '$apellido2', '$fechaNac', '$email')\n ";
 
            // echo $consulta;
 
