@@ -18,6 +18,15 @@
     <tbody>
 
   <?php
+        if (isset($_POST['filtrar'])){
+
+            echo "vengo de POST";
+            $nomApe = $_POST['nomApe'];
+
+            $consulta="SELECT * FROM alumnos WHERE CONCAT(nombre, ' ', apellido1, ' ', apellido2)
+            like '%".nomAoe."%'";
+        }
+
         $consulta = "SELECT * FROM alumnos";
         //ejecuta la consulta y devuelve un array con todas las
         //filas resultantes
@@ -38,16 +47,25 @@
                 echo "</tr>\n";
         }
     ?>
-    </tbody>
-    </table>
-    <div class="mensaje">
+        </tbody>
+        </table>
+        <div class="mensaje">
         <?php
             if(isset($_SESSION['mensaje'])){
                 echo $_SESSION['mensaje'];
                 unset($_SESSION['mensaje']);
 
             }  
-    
+    ?>
+    </div>
+
+    <!-- Formulario para filtrado de la tabla
+       Este formulario enlaza con la propia pagina, de tal manera que si
+       se llega desde el formulario -> queremos filtrar informacion, pero-->
+    <h2> Buscar: </h2>
+    <form action="listado.php" method="post">
+            <label for= "nomape">Nombre y Apellidos: </label>
+            <input type = "text" name= "nomApe" id= "nomApe">
 
 
- require_once('plantillas/pie.php'); ?>
+<?php            require_once('plantillas/pie.php'); ?>
