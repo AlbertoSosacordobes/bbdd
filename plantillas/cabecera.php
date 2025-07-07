@@ -19,9 +19,7 @@ require_once("config.php");
     <li><a href='index.php'> Inicio </a></li>
     <li><a href='listado.php'>Mostrar alumnos</a></li>
     <li><a href='registro.php'>Insertar alumnos</a></li>
-    <li></li>
-    <li></li>
-</ul>
+  
 </nav>
 </header>
 <main>
