@@ -67,7 +67,7 @@ if(mysqli_num_rows($resultado)==0){
         <div class="control">
             <input type="submit" value="Editar Alumno">
         </div>
-            <imput type="hidden" name = "id" value = '<?=$id?>'>
+        <input type="hidden" name="id" value='<?=$id?>'>
     </form>
 </article>
 
