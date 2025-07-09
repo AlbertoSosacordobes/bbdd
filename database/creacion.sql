@@ -27,12 +27,14 @@ CREATE Table alumnos(
     fecha_nac date,
     email varchar(100)
 )
+drop table alumnnos;
 
-create table asignaturas{
+
+create table asignaturas(
 
     id int unsigned AUTO_INCREMENT PRIMARY KEY,
-    nombre, VARCHAR(50) NOT NULL,
-    tipo enum('TRONCAL'. 'OBLIGATORIA', 'OPTATIVA'),
+    nombre VARCHAR(50) NOT NULL,
+    tipo enum('TRONCAL', 'OBLIGATORIA', 'OPTATIVA'),
     creditos FLOAT DEFAULT 6 check(creditos >0),
-    curso TINYINT UNSIGNED,
-    };
+    curso TINYINT UNSIGNED
+);
